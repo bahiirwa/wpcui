@@ -10,7 +10,8 @@ class ImportExportSettingsService {
 
 
 	public function __construct() {
-		$this->sanitizer = new AdminSanitizerService();
+		$this->formControlService = new FormControlsService();
+		$this->sanitizer          = new AdminSanitizerService();
 	}
 
 
@@ -24,14 +25,15 @@ class ImportExportSettingsService {
 		add_settings_section( 'wpcui_import_code', 'Import Code', [ $this, 'sectionOutput' ], 'wpcui-export-import' );
 
 		add_settings_field( 'section_title',
-			'Section Title',
-			[ $this->formControlService, 'textField' ],
-			'wpcui',
-			'wpcui_section_index',
+			'WPCUI Import Code',
+			[ $this->formControlService, 'textArea' ],
+			'wpcui-export-import',
+			'wpcui_import_code',
 			[
+				'name'        => 'import_code',
 				'option_name' => 'wpcui_sections',
 				'label_for'   => 'section_title',
-				'placeholder' => 'eg. Personal Info',
+				'placeholder' => 'Enter code here',
 			] );
 	}
 

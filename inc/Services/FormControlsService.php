@@ -17,7 +17,7 @@ class FormControlsService
         $name = $args['label_for'];
         $option_name = $args['option_name'];
         $value = '';
-        $required = $args['required'] ? 'required' : '';
+        $required = array_key_exists('required', $args) && $args['required'] ? 'required' : '';
 
         echo '<textarea rows="4" class="regular-text" id="' . $name . '" name="' . $option_name . '[' . $name . ']" value="' . $value . '" placeholder="' . $args['placeholder'] . ' ' . $required . '"></textarea>';
     }
