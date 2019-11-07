@@ -123,8 +123,13 @@ class AdminSanitizerService {
 
 
 	public function sanitizeImport( $input ) {
-		var_dump($input);
-		die;
+		$import = $_POST["import_controls"]["import_code"];
+
+		$json = json_decode($import);
+
+		var_dump($_POST); die;
+
+		var_dump($json['sections']); die;
 	}
 
 

@@ -1,5 +1,8 @@
 <div class="wrap">
+
     <h1>WPCUI Export/Import</h1>
+
+	<?php settings_errors(); ?>
 
     <p>Copy the text below to another WordPress installation.</p>
 
@@ -15,7 +18,6 @@
 
 
     <hr>
-
 
     <form method="post" action="options.php">
 		<?php

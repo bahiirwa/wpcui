@@ -30,9 +30,8 @@ class ImportExportSettingsService {
 			'wpcui-export-import',
 			'wpcui_import_code',
 			[
-				'name'        => 'import_code',
-				'option_name' => 'wpcui_sections',
-				'label_for'   => 'section_title',
+				'option_name' => 'import_controls',
+				'label_for'   => 'import_code',
 				'placeholder' => 'Enter code here',
 			] );
 	}
