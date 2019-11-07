@@ -122,6 +122,12 @@ class AdminSanitizerService {
 	}
 
 
+	public function sanitizeImport( $input ) {
+		var_dump($input);
+		die;
+	}
+
+
 	public function validateControlId( $id ) {
 		if ( strpos( $id, ' ' ) ) {
 			return 'Control ID must not contain spaces.';

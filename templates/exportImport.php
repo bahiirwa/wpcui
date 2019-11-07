@@ -13,4 +13,16 @@
 
     <textarea readonly rows="10" cols="100"><?= json_encode($export); ?></textarea>
 
+
+    <hr>
+
+
+    <form method="post" action="options.php">
+		<?php
+		settings_fields( 'wpcui-import' );
+		do_settings_sections( 'wpcui-export-import' );
+		submit_button( 'Import' );
+		?>
+    </form>
+
 </div>
